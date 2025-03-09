@@ -9,7 +9,7 @@ void main() async{
 }
 
 Future<void> _setup()async{
-  WidgetsFlutterBinding.ensureInitialized()
+ await WidgetsFlutterBinding.ensureInitialized()
 ; await dotenv.load(fileName: '.env');
  Stripe.publishableKey= dotenv.env['STRIPE_PUBLIC_KEY']!; 
 }
